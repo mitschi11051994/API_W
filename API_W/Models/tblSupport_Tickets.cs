@@ -11,14 +11,20 @@ namespace API_W.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class tblSupport_Tickets
     {
         public int id_Support_Tickets { get; set; }
+        [Required]
         public string title { get; set; }
+        [Required]
         public string detalle { get; set; }
+        [Required]
         public Nullable<int> id_user { get; set; }
+        [Required]
         public Nullable<int> id_client { get; set; }
+        [Required]
         public string estado { get; set; }
     }
 }

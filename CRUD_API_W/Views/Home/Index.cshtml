@@ -1,13 +1,8 @@
-﻿
-@{
-    ViewBag.Title = "Index";
-}
-
-<!doctype html>
+﻿<!doctype html>
 <html>
 <head>
     <meta charset="utf-8" />
-    <title>ADMINISTRADOR</title>
+    <title>Index</title>
     <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
     <link href="~/Content/bootstrap.css" rel="stylesheet" />
     <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
@@ -18,55 +13,58 @@
             font-size: 35px;
             margin-left: 220PX;
         }
+
         input,
         select,
         textarea {
             width: 420px;
             height: auto;
         }
+
         .profile-img {
-            width: 235px;
-            height: 235px;
-            margin-left: 3em;
-            margin-top: 5px;
+            width: 230px;
+            height: 230px;
+            margin-left: -5em;
+            margin-left: 2em;
+            margin-top: 75px;
             padding-top: -1em;
             padding-bottom: -1em;
             border-radius: 107px 107px 107px 107px;
             -moz-border-radius: 107px 107px 107px 107px;
             -webkit-border-radius: 107px 107px 107px 107px;
             border: 11px solid #96d4c8;
-            
         }
-
-        </style>
+    </style>
 
 </head>
 <body>
 
+ <a href="@Url.Action("SignOut", "Home")">Logout</a>
+        <div class="container">
 
-<div class="container">
+            <div class="row">
+                <div class="panel panel-success" style="width:80em; height: 34.5em; margin-left: -0.1em; padding: 1em; padding-top: -1EM;  margin-top: 1em; ">
 
-    <div class="row">
-        <div class="panel panel-success" style="width:80em; height: 34.5em; margin-left: -0.1em; padding: 1em; padding-top: -1EM;  margin-top: 1em; ">
-
-            <div class="panel-body" style="width: 50em; margin-left: 0em; margin-top: 0em;  padding: 5px 10px;">                
-                <img class="profile-img" src="http://icon-icons.com/icons2/1146/PNG/512/1486485588-add-create-new-math-sign-cross-plus_81186.png" 
-                     style="">
-                <a href="@Url.Action("Usuarios", "tblLogins/Index")">Usuarios</a>                
-                <img/>
-
+                    <div class="panel-body" style="width: 50em; margin-left: 0em; margin-top: 0em;  padding: 5px 10px;">
+                        <div id="apDiv1">
+                            <table border="0">
+                                <tr>
+                                    <td><img class="profile-img" src="https://images.vexels.com/media/users/3/135247/isolated/preview/e70a6296c2a79dc7a56ab05b103f38e8-signo-del-usuario-con-el-fondo-by-vexels.png" align="left" /><a href="@Url.Action("Clientes", "tblClients/Index")">Clientes</a></td>
+                                    <td><img class="profile-img" src="http://simplework.es/wp-content/uploads/2016/12/salasdereunion.png" align="left" /> <a href="@Url.Action("Reuniones", "tblReunions1/Index")">Reuniones</a></td>
+                                    <td><img class="profile-img" src="http://alfarored.com/templates/alfarored/images/contacto.png" align="left" /> <a href="@Url.Action("Contactos", "tblContact/Index")" />Contactos</td>
+                                    <td><img class="profile-img" src="https://www.apspayroll.com/wp-content/blog-images/checklist-icon-350.png" align="left" /> <a href="@Url.Action("Soporte_Tiquetes", "tblSupport_Tickets/Index")" />Tiquetes Soporte</td>
+                                </tr>
+                            </table>
+                        </div>
+                    </div>
+                </div>
             </div>
-          </div>
         </div>
-    </div>
+        @section Scripts {
+            @Scripts.Render("~/bundles/jqueryval")
+        }
 </body>
 </html>
-
-
-@section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
-}
-
 
 
 

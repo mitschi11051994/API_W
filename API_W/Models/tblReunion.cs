@@ -11,14 +11,20 @@ namespace API_W.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class tblReunion
     {
         public int id_reunion { get; set; }
+        [Required]
         public string title { get; set; }
+        [Required]
         public Nullable<System.DateTime> fecha_y_hora { get; set; }
+        [Required]
         public Nullable<int> id_user { get; set; }
+        [Required]
         public Nullable<bool> esVirtual { get; set; }
+        [Required]
         public Nullable<int> id_client { get; set; }
     }
 }

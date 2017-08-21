@@ -11,12 +11,16 @@ namespace API_W.Models
 {
     using System;
     using System.Collections.Generic;
-    
+    using System.ComponentModel.DataAnnotations;
+
     public partial class tblLogin
     {
         public int id_user { get; set; }
+        [Required]
         public string Username { get; set; }
+        [Required]
         public string Password { get; set; }
+        [Required]
         public string Role { get; set; }
     }
 }
