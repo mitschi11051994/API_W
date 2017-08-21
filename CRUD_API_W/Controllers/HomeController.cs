@@ -1,5 +1,6 @@
 ﻿using System.Web.Mvc;
 using System.Web.Security;
+using CRUD_API_W.Models;
 
 namespace WebApplication1.Controllers
 {
@@ -22,8 +23,6 @@ namespace WebApplication1.Controllers
         }
         
 
-
-        [Authorize]
         public ActionResult SignOut()
         {
             FormsAuthentication.SignOut();
