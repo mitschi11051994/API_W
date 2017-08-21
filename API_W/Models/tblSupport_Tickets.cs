@@ -21,9 +21,9 @@ namespace API_W.Models
         [Required]
         public string detalle { get; set; }
         [Required]
-        public Nullable<int> id_user { get; set; }
+        public int id_user { get; set; }
         [Required]
-        public Nullable<int> id_client { get; set; }
+        public int id_client { get; set; }
         [Required]
         public string estado { get; set; }
     }

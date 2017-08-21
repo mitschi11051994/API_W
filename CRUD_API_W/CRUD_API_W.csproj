@@ -143,6 +143,10 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\tblClientsController.cs" />
+    <Compile Include="Controllers\tblContactController.cs" />
+    <Compile Include="Controllers\tblLoginsController.cs" />
+    <Compile Include="Controllers\tblReunions1Controller.cs" />
+    <Compile Include="Controllers\tblSupport_TicketsController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -180,12 +184,15 @@
       <DependentUpon>Web.config</DependentUpon>
     </Content>
     <Content Include="Views\Web.config" />
-    <Content Include="Views\_ViewStart.cshtml" />
     <Content Include="Views\Shared\Error.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Home\Login.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
-    <Content Include="Views\tblClients\tblClients.cshtml" />
+    <Content Include="Views\tblClients\Index.cshtml" />
+    <Content Include="Views\tblContact\Index.cshtml" />
+    <Content Include="Views\tblLogins\Index.cshtml" />
+    <Content Include="Views\tblReunions1\Index.cshtml" />
+    <Content Include="Views\tblSupport_Tickets\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

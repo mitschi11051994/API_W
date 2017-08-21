@@ -46,13 +46,13 @@ namespace CRUD_API_W
             routes.MapRoute(
                 name: "tblContacts",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "tblContact", action = "Index", id = UrlParameter.Optional }
+                defaults: new { controller = "tblContacts", action = "Index", id = UrlParameter.Optional }
             );
 
             routes.MapRoute(
                 name: "crear tblContacts",
                 url: "{controller}/{action}/{id}",
-                defaults: new { controller = "tblContact/Index/", action = "Create", id = UrlParameter.Optional }
+                defaults: new { controller = "tblContacts/Index/", action = "Create", id = UrlParameter.Optional }
             );
 
             routes.MapRoute(
