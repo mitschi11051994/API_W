@@ -9,19 +9,19 @@ using System.Web.Mvc;
 
 namespace CRUD_API_W.Models
 {
-    public class tblClients_Client
+    public class tblClient_Client
     {
         private string BASE_URL = "http://localhost:41795/api/";
-        public IEnumerable<tblClients> findAll()
+        public IEnumerable<tblClient> findAll()
         {
             try
             {
                 HttpClient client = new HttpClient();
                 client.BaseAddress = new Uri(BASE_URL);
                 client.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("aplication/json"));
-                HttpResponseMessage response = client.GetAsync("tblClients").Result;
+                HttpResponseMessage response = client.GetAsync("tblClient").Result;
                 if (response.IsSuccessStatusCode)
-                    return response.Content.ReadAsAsync<IEnumerable<tblClients>>().Result;
+                    return response.Content.ReadAsAsync<IEnumerable<tblClient>>().Result;
                 return null;
             }
             catch

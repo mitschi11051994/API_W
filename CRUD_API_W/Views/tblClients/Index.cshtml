@@ -25,13 +25,7 @@
 
 </head>
 <body>
-
-    @if (User.Identity.IsAuthenticated)
-    {
-        <h2 class="titulo">BIENVENIDO USUARIO: @(User.Identity.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Guest") </h2>
         <a href="@Url.Action("SignOut", "Home")">Logout</a>
-
-
         <div class="container">
 
             <div class="row">
@@ -40,58 +34,57 @@
                     <div class="panel-body" style="width: 50em; margin-left: 0em; margin-top: 0em;  padding: 5px 10px;">
 
                         <div>
-                            <a href="@Url.Action("IndexUser", "Home")">Regresar</a>
+                            <a href="@Url.Action("Index", "Home")">Regresar</a>
                             <p>
                                 @Html.ActionLink("Crear Nuevo Cliente", "Create")
                             </p>
                             <table class="table">
                                 <tr>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.id_client)
+                                        ID
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.name)
+                                        NAME
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.web_page)
+                                       WEB PAGE
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.direccion)
+                                        DIRECTION
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.tel)
+                                        TEL
                                     </th>
                                     <th>
-                                        @Html.DisplayNameFor(model => model.puesto)
+                                        PUESTO
                                     </th>
                                     <th></th>
                                 </tr>
 
-                                @foreach (var item in Model)
+                                @foreach (var tblClient in ViewBag.listtblClient)
                                 {
                                     <tr>
                                         <td>
-                                            @Html.DisplayFor(modelItem => item.id_client)
+                                           @tblClient.id_client)
                                         </td>
                                         <td>
-                                            @Html.DisplayFor(modelItem => item.name)
+                                            @tblClient.name)
                                         </td>
                                         <td>
-                                            @Html.DisplayFor(modelItem => item.web_page)
+                                            @tblClient.web_page)
                                         </td>
                                         <td>
-                                            @Html.DisplayFor(modelItem => item.direccion)
+                                            @tblClient.direccion)
                                         </td>
                                         <td>
-                                            @Html.DisplayFor(modelItem => item.tel)
+                                            @tblClient.tel)
                                         </td>
                                         <td>
-                                            @Html.DisplayFor(modelItem => item.puesto)
+                                            @tblClient.puesto)
                                         </td>
                                         <td>
-                                            @Html.ActionLink("Edit", "Edit", new { id = item.id_client }) |
-                                            @Html.ActionLink("Details", "Details", new { id = item.id_client }) |
-                                            @Html.ActionLink("Delete", "Delete", new { id = item.id_client })
+                                            @Html.ActionLink("Edit", "Edit", new { id = tblClient.id_client }) |
+                                            @Html.ActionLink("Delete", "Delete", new { id = tblClient.id_client })
                                         </td>
                                     </tr>
                                 }
@@ -105,12 +98,6 @@
                 </div>
             </div>
         </div>
-    }
-    else
-    {
-        <h1>Intento de Acceso Incorrecto</h1>
-        <h2> Autentícate Primero</h2>
-        <a href="@Url.Action("Login", "Home")">Página de Inicio</a>
-    }
+
 </body>
 </html>

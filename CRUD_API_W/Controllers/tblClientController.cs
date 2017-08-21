@@ -7,13 +7,13 @@ using System.Web.Mvc;
 
 namespace CRUD_API_W.Controllers
 {
-    public class tblClientsController : Controller
+    public class tblClientController : Controller
     {
         // GET: tblClients
         public ActionResult Index()
         {
-            tblClients_Client pc = new tblClients_Client();
-            ViewBag.listtblClients = pc.findAll();
+            tblClient_Client pc = new tblClient_Client();
+            ViewBag.listtblClient = pc.findAll();
             return View();
         }
     }

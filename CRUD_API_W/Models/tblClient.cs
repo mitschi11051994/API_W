@@ -6,7 +6,7 @@ using System.Web;
 
 namespace CRUD_API_W.Models
 {
-    public class tblClients
+    public class tblClient
     {
 
         public int id_client { get; set; }

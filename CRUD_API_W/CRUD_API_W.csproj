@@ -174,7 +174,7 @@
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\HomeController.cs" />
-    <Compile Include="Controllers\tblClientsController.cs" />
+    <Compile Include="Controllers\tblClientController.cs" />
     <Compile Include="Controllers\tblContactController.cs" />
     <Compile Include="Controllers\tblLoginsController.cs" />
     <Compile Include="Controllers\tblReunionsController.cs" />
@@ -182,8 +182,8 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Models\tblClients.cs" />
-    <Compile Include="Models\tblClients_Client.cs" />
+    <Compile Include="Models\tblClient.cs" />
+    <Compile Include="Models\tblClient_Client.cs" />
     <Compile Include="Models\tblContact_Client.cs" />
     <Compile Include="Models\tblContact.cs" />
     <Compile Include="Models\tblLogin_Client.cs" />
