@@ -151,6 +151,10 @@
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
     <Compile Include="Models\tblClients.cs" />
+    <Compile Include="Models\tblContact.cs" />
+    <Compile Include="Models\tblLogin.cs" />
+    <Compile Include="Models\tblReunion.cs" />
+    <Compile Include="Models\tblSupport_Tickets.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

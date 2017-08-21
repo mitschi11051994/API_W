@@ -6,7 +6,7 @@ using System.Web.Mvc;
 
 namespace CRUD_API_W.Controllers
 {
-    public class tblReunions1Controller : Controller
+    public class tblReunionsController : Controller
     {
         // GET: tblReunion
         public ActionResult Index()
