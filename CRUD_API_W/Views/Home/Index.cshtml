@@ -1,31 +1,75 @@
-﻿@{
-    ViewBag.Title = "Home Page";
+﻿
+@{
+    ViewBag.Title = "Index";
 }
 
-<div class="jumbotron">
-    <h1>ASP.NET</h1>
-    <p class="lead">ASP.NET is a free web framework for building great Web sites and Web applications using HTML, CSS and JavaScript.</p>
-    <p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>
-</div>
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>ADMINISTRADOR</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.css" rel="stylesheet" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" />
+    <style>
+        .titulo {
+            color: midnightblue;
+            font-family: 'Bookman Old Style';
+            font-size: 35px;
+            margin-left: 220PX;
+        }
+        input,
+        select,
+        textarea {
+            width: 420px;
+            height: auto;
+        }
+        .profile-img {
+            width: 235px;
+            height: 235px;
+            margin-left: 3em;
+            margin-top: 5px;
+            padding-top: -1em;
+            padding-bottom: -1em;
+            border-radius: 107px 107px 107px 107px;
+            -moz-border-radius: 107px 107px 107px 107px;
+            -webkit-border-radius: 107px 107px 107px 107px;
+            border: 11px solid #96d4c8;
+            
+        }
 
-<div class="row">
-    <div class="col-md-4">
-        <h2>Getting started</h2>
-        <p>
-            ASP.NET MVC gives you a powerful, patterns-based way to build dynamic websites that
-            enables a clean separation of concerns and gives you full control over markup
-            for enjoyable, agile development.
-        </p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301865">Learn more &raquo;</a></p>
+        </style>
+
+</head>
+<body>
+
+
+<div class="container">
+
+    <div class="row">
+        <div class="panel panel-success" style="width:80em; height: 34.5em; margin-left: -0.1em; padding: 1em; padding-top: -1EM;  margin-top: 1em; ">
+
+            <div class="panel-body" style="width: 50em; margin-left: 0em; margin-top: 0em;  padding: 5px 10px;">                
+                <img class="profile-img" src="http://icon-icons.com/icons2/1146/PNG/512/1486485588-add-create-new-math-sign-cross-plus_81186.png" 
+                     style="">
+                <a href="@Url.Action("Usuarios", "tblLogins/Index")">Usuarios</a>                
+                <img/>
+
+            </div>
+          </div>
+        </div>
     </div>
-    <div class="col-md-4">
-        <h2>Get more libraries</h2>
-        <p>NuGet is a free Visual Studio extension that makes it easy to add, remove, and update libraries and tools in Visual Studio projects.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301866">Learn more &raquo;</a></p>
-    </div>
-    <div class="col-md-4">
-        <h2>Web Hosting</h2>
-        <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
-        <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
-    </div>
-</div>
+</body>
+</html>
+
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}
+
+
+
+
+
+
+

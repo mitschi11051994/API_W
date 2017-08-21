@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Web;
-using System.Web.Mvc;
+﻿using System.Web.Mvc;
+using System.Web.Security;
 
-namespace CRUD_API_W.Controllers
+namespace WebApplication1.Controllers
 {
     public class HomeController : Controller
     {
@@ -13,18 +10,24 @@ namespace CRUD_API_W.Controllers
             return View();
         }
 
-        public ActionResult About()
+        
+        public ActionResult IndexUser()
         {
-            ViewBag.Message = "Your application description page.";
-
             return View();
         }
 
-        public ActionResult Contact()
+        public ActionResult Login()
         {
-            ViewBag.Message = "Your contact page.";
-
             return View();
+        }
+        
+
+
+        [Authorize]
+        public ActionResult SignOut()
+        {
+            FormsAuthentication.SignOut();
+            return RedirectToAction("Login", "Home");
         }
     }
 }
